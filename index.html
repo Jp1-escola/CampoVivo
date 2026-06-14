@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Campo Vivo - O equilíbrio entre tecnologia e meio ambiente. Descubra como inovações tecnológicas estão transformando o agronegócio sustentável.">
+    <meta name="keywords" content="Campo Vivo, Agrinho 2026, tecnologia agrícola, sustentabilidade, meio ambiente">
+    <meta name="author" content="João Pedro Lopes de Medeiros">
+    <title>Campo Vivo - O Equilíbrio entre Tecnologia e Meio Ambiente</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+
+    <header class="header-container">
+        <div class="logo-area">
+            <h1>Campo Vivo</h1>
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="#Equilibrio">Como equilibrar?</a></li>
+                <li><a href="#EnergiasRenovaveis">Soluções Práticas</a></li>
+                <li><a href="#calculadora">Calcular Impacto</a></li>
+            </ul>
+            <div class="config-container">
+                <button id="btn-config" class="btn-config" aria-label="Configurações">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="icone-engrenagem">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path
+                            d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z">
+                        </path>
+                    </svg>
+                </button>
+
+                <div id="painel-config" class="painel-config">
+                    <button id="btn-tema" class="btn-controle">🌙 Alternar Tema</button>
+
+                    <div class="controle-fonte">
+                        <label for="slider-fonte">Tamanho da Fonte</label>
+                        <input type="range" id="slider-fonte" min="14" max="32" value="16">
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero-banner">
+        <svg class="hero-cenario" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMax slice"
+            xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="ceu-gradiente" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stop-color="#e0f2f1" />
+                    <stop offset="60%" stop-color="#ffffff" />
+                    <stop offset="100%" stop-color="#f1f8e9" />
+                </linearGradient>
+                <linearGradient id="metal-eolica" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#b0bec5" />
+                    <stop offset="50%" stop-color="#ffffff" />
+                    <stop offset="100%" stop-color="#90a4ae" />
+                </linearGradient>
+            </defs>
+
+            <rect width="1200" height="400" fill="url(#ceu-gradiente)" />
+            <path d="M0,260 Q350,200 700,250 T1200,220 L1200,400 L0,400 Z" fill="#81c784" opacity="0.7" />
+
+            <g transform="translate(300, 110)">
+                <polygon points="48,120 52,120 50.5,30 49.5,30" fill="url(#metal-eolica)" />
+                <g class="helices-banner helices-lenta">
+                    <path d="M 50 30 C 47 15, 45 5, 50 0 C 53 5, 51 15, 50 30 Z" fill="#ffffff" stroke="#b0bec5"
+                        stroke-width="0.3" />
+                    <path d="M 50 30 C 47 15, 45 5, 50 0 C 53 5, 51 15, 50 30 Z" fill="#ffffff" stroke="#b0bec5"
+                        stroke-width="0.3" transform="rotate(120 50 30)" />
+                    <path d="M 50 30 C 47 15, 45 5, 50 0 C 53 5, 51 15, 50 30 Z" fill="#ffffff" stroke="#b0bec5"
+                        stroke-width="0.3" transform="rotate(240 50 30)" />
+                    <circle cx="50" cy="30" r="2" fill="#eceff1" />
+                </g>
+            </g>
+
+            <path d="M0,290 Q400,240 800,300 T1200,260 L1200,400 L0,400 Z" fill="#4caf50" />
+            <path d="M 150,270 Q 200,320 220,400" stroke="#388e3c" stroke-width="3" fill="none" opacity="0.4" />
+            <path d="M 190,268 Q 250,320 280,400" stroke="#388e3c" stroke-width="3" fill="none" opacity="0.4" />
+            <path d="M 230,267 Q 300,320 340,400" stroke="#388e3c" stroke-width="3" fill="none" opacity="0.4" />
+
+            <g transform="translate(850, 80)">
+                <polygon points="46,180 54,180 51,40 49,40" fill="url(#metal-eolica)" />
+                <rect x="44" y="34" width="12" height="8" rx="2" fill="#cfd8dc" />
+                <g class="helices-banner helices-rapida">
+                    <path d="M 50 38 C 45 20, 42 5, 50 0 C 55 5, 52 20, 50 38 Z" fill="#ffffff" stroke="#90a4ae"
+                        stroke-width="0.5" />
+                    <path d="M 50 38 C 45 20, 42 5, 50 0 C 55 5, 52 20, 50 38 Z" fill="#ffffff" stroke="#90a4ae"
+                        stroke-width="0.5" transform="rotate(120 50 38)" />
+                    <path d="M 50 38 C 45 20, 42 5, 50 0 C 55 5, 52 20, 50 38 Z" fill="#ffffff" stroke="#90a4ae"
+                        stroke-width="0.5" transform="rotate(240 50 38)" />
+                    <circle cx="50" cy="38" r="3.5" fill="#ffffff" stroke="#90a4ae" stroke-width="0.5" />
+                </g>
+            </g>
+
+            <path d="M0,340 Q300,310 600,350 T1200,320 L1200,400 L0,400 Z" fill="#2e7d32" />
+            <path d="M 800,340 Q 850,360 900,400" stroke="#1b5e20" stroke-width="4" fill="none" opacity="0.5" />
+            <path d="M 860,338 Q 930,360 1000,400" stroke="#1b5e20" stroke-width="4" fill="none" opacity="0.5" />
+            <path d="M 920,337 Q 1010,360 1100,400" stroke="#1b5e20" stroke-width="4" fill="none" opacity="0.5" />
+        </svg>
+
+        <div class="hero-conteudo">
+            <span class="hero-tag">Agrinho 2026</span>
+            <h2>Agro Forte, Futuro Sustentável</h2>
+            <p>A tecnologia no campo: inovações tecnológicas reais que protegem o meio ambiente.</p>
+            <div class="hero-buttons">
+                <a href="#calculadora" class="btn-primary">Simular Impacto</a>
+                <a href="#EnergiasRenovaveis" class="btn-secondary">Conhecer Tecnologias</a>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <section id="Equilibrio" class="content-section">
+            <div class="section-header">
+                <h2>Como equilibrar?</h2>
+                <p>Como usar tecnologias para preservar o meio ambiente?</p>
+            </div>
+
+            <div class="grid-container">
+                <article class="card-problema">
+                    <h3>Importância de Proteger o Meio Ambiente</h3>
+                    <p>A proteção do meio ambiente é fundamental para a sobrevivência, o desenvolvimento sustentável e a
+                        preservação da biodiversidade. A Constituição garante esse direito a todos e estabelece que
+                        governo e sociedade devem cuidar dos recursos naturais.</p>
+                </article>
+
+                <article class="card-problema">
+                    <h3>De que maneiras a tecnologia pode ajudar?</h3>
+                    <p>A tecnologia pode ajudar a equilibrar o meio ambiente em 8 principais maneiras: <a
+                            href="#EnergiasRenovaveis">Energias Renováveis</a>, <a
+                            href="#EficienciaEnergetica">Eficiência Energética</a>, <a href="#EconomiaCircular">Economia
+                            Circular</a>, <a href="#AgriculturaPrecisao">Agricultura de Precisão</a>, <a
+                            href="#MonitoramentoAmbiental">Monitoramento Ambiental</a>, <a
+                            href="#TransporteSustentavel">Transporte Sustentável</a>, <a
+                            href="#CombateDesmatamento">Combate ao
+                            Desmatamento</a> e <a href="#ConscientizacaoAmbiental">Conscientização Ambiental.</a></p>
+                </article>
+
+                <article class="card-problema">
+                    <h3>Impacto em Grandes Fazendas</h3>
+                    <p>As tecnologias sustentáveis podem beneficiar grandes fazendas ao aumentar a produtividade e
+                        reduzir custos. Ferramentas como <a href="#AgriculturaPrecisao">agricultura de precisão</a>, <a
+                            href="#EnergiasRenovaveis">energias renováveis</a>, <a href="#IrrigacaoEficiente">irrigação
+                            eficiente</a>, <a href="#Biodigestores">biodigestores</a> e <a
+                            href="#Bioinseticidas">bioinseticidas</a> ajudam a economizar água, energia e insumos.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="EnergiasRenovaveis" class="pratica-section bloco-bg-0">
+            <div class="pratica-overlay">
+                <div class="pratica-layout">
+                    <h3>Energias Renováveis</h3>
+                    <p>As energias renováveis são obtidas de fontes naturais que se regeneram continuamente, como
+                        sol, vento, água e biomassa. Elas representam uma alternativa sustentável às fontes não
+                        renováveis, pois reduzem a poluição e as emissões de gases de efeito estufa.</p>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <section id="EficienciaEnergetica" class="pratica-section bloco-bg-1">
+            <div class="pratica-overlay">
+                <div class="pratica-layout">
+                    <h3>Eficiência Energética</h3>
+                    <p>Consiste em utilizar a energia de forma mais inteligente, reduzindo desperdícios sem comprometer
+                        a produtividade. Tecnologias como lâmpadas LED, equipamentos eficientes e sistemas automatizados
+                        ajudam a diminuir os custos e as emissões de gases poluentes.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="EconomiaCircular" class="pratica-section bloco-bg-2">
+            <div class="pratica-overlay">
+                <div class="pratica-layout">
+                    <h3>Economia Circular</h3>
+                    <p>É um modelo que busca reutilizar, reciclar e reaproveitar materiais pelo maior tempo possível.
+                        Dessa forma, reduz a geração de resíduos, economiza recursos naturais e contribui para uma
+                        produção mais sustentável.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="AgriculturaPrecisao" class="pratica-section bloco-bg-3">
+            <div class="pratica-overlay">
+                <div class="pratica-layout">
+                    <h3>Agricultura de Precisão</h3>
+                    <p>UUtiliza tecnologias como drones, sensores, satélites e inteligência artificial para monitorar as
+                        lavouras. Isso permite aplicar água, fertilizantes e defensivos apenas onde necessário,
+                        aumentando a produtividade e reduzindo impactos ambientais.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="MonitoramentoAmbiental" class="pratica-section bloco-bg-4">
+            <div class="pratica-overlay">
+                <div class="pratica-layout">
+                    <h3>Monitoramento Ambiental</h3>
+                    <p>Envolve a coleta contínua de informações sobre o ar, a água e o solo por meio de sensores e
+                        imagens de satélite. Esses dados ajudam a identificar problemas ambientais rapidamente e a tomar
+                        medidas para proteger os ecossistemas.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="TransporteSustentavel" class="pratica-section bloco-bg-5">
+            <div class="pratica-overlay">
+                <div class="pratica-layout">
+                    <h3>Transporte Sustentável</h3>
+                    <p>Baseia-se no uso de veículos elétricos, híbridos e sistemas de transporte mais eficientes. Seu
+                        objetivo é reduzir a emissão de poluentes e a dependência de combustíveis fósseis, tornando a
+                        mobilidade mais sustentável.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="CombateDesmatamento" class="pratica-section bloco-bg-6">
+            <div class="pratica-overlay">
+                <div class="pratica-layout">
+                    <h3>Combate ao Desmatamento</h3>
+                    <p>Utiliza tecnologias como satélites, drones e inteligência artificial para detectar áreas
+                        desmatadas em tempo real. Isso facilita a fiscalização e ajuda a preservar florestas,
+                        biodiversidade e recursos naturais.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="ConscientizacaoAmbiental" class="pratica-section bloco-bg-7">
+            <div class="pratica-overlay">
+                <div class="pratica-layout">
+                    <h3>Conscientização Ambiental</h3>
+                    <p>Consiste no uso de plataformas digitais, aplicativos e campanhas educativas para informar a
+                        população sobre sustentabilidade. Essas ferramentas incentivam mudanças de comportamento que
+                        contribuem para a preservação do meio ambiente.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="IrrigacaoEficiente" class="pratica-section bloco-bg-8">
+            <div class="pratica-overlay">
+                <div class="pratica-layout">
+                    <h3>Irrigação Eficiente</h3>
+                    <p>Emprega sensores e sistemas inteligentes para fornecer às plantas apenas a quantidade necessária
+                        de água. Com isso, reduz o desperdício hídrico, melhora o desenvolvimento das culturas e aumenta
+                        a produtividade agrícola. </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="Biodigestores" class="pratica-section bloco-bg-9">
+            <div class="pratica-overlay">
+                <div class="pratica-layout">
+                    <h3>Biodigestores</h3>
+                    <p>São equipamentos que transformam resíduos orgânicos em energia e fertilizantes por meio da
+                        decomposição da matéria orgânica. Além de reduzir a poluição, ajudam a aproveitar melhor os
+                        resíduos e a gerar recursos úteis.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="Bioinseticidas" class="pratica-section bloco-bg-10">
+            <div class="pratica-overlay">
+                <div class="pratica-layout">
+                    <h3>Bioinseticidas</h3>
+                    <p>São métodos naturais de controle de pragas que utilizam organismos vivos, como bactérias e
+                        fungos. Eles reduzem a necessidade de produtos químicos, protegendo o solo, a água, a saúde
+                        humana e o equilíbrio dos ecossistemas.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="calculadora" class="content-section">
+            <div class="section-header">
+                <h2>Calculadora de Impacto Renovável</h2>
+                <p>Simule o potencial de geração de energia limpa e a redução de poluentes na sua propriedade rural.</p>
+            </div>
+
+            <div class="calculadora-box">
+                <form id="form-calculadora">
+                    <div class="form-group">
+                        <label for="tamanho-hectares">Tamanho do projeto ou consumo planejado (em kWh/mês):</label>
+                        <input type="number" id="tamanho-hectares" placeholder="Ex: 500" required min="1">
+                    </div>
+                    <div class="form-group">
+                        <label for="tecnologia-escolhida">Escolha a Fonte de Energia:</label>
+                        <select id="tecnologia-escolhida" required>
+                            <option value="" disabled selected>Selecione uma opção...</option>
+                            <option value="solar">Painéis Solares Fotovoltaicos</option>
+                            <option value="eolica">Aerogeradores (Energia Eólica)</option>
+                            <option value="biodigestor">Biodigestor (Biomassa de Dejetos)</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-calc">Calcular Impacto Ambiental</button>
+                </form>
+
+                <div id="resultado-calculadora" class="resultado-container hidden">
+                    <h3>Simulação Concluída com Sucesso!</h3>
+                    <div class="cards-resultado">
+                        <div class="card-res">
+                            <h4>Energia Limpa Estimada</h4>
+                            <p id="res-economia">0 kWh</p>
+                        </div>
+                        <div class="card-res">
+                            <h4>CO₂ Evitado no Ano</h4>
+                            <p id="res-co2">0 kg/ano</p>
+                        </div>
+                        <div class="resultado-grid">
+                            <div class="card-res">
+                                <h4>Produtividade</h4>
+                                <p id="res-produtividade">0%</p>
+                            </div>
+                            <div class="card-res">
+                                <h4>Economia de Água</h4>
+                                <p id="res-agua">0%</p>
+                            </div>
+                            <div class="card-res">
+                                <h4>Redução de Emissões</h4>
+                                <p id="res-carbono">0%</p>
+                            </div>
+                            <div class="card-res">
+                                <h4>Índice Ecológico</h4>
+                                <p id="res-indice">0%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grafico-container">
+                        <h3>Desempenho Sustentável</h3>
+                        <div class="barra-item">
+                            <span>Produtividade</span>
+                            <div class="barra-fundo">
+                                <div id="barra-produtividade" class="barra"></div>
+                            </div>
+                            <span id="texto-produtividade">0%</span>
+                        </div>
+                        <div class="barra-item">
+                            <span>Economia de Água</span>
+                            <div class="barra-fundo">
+                                <div id="barra-agua" class="barra"></div>
+                            </div>
+                            <span id="texto-agua">0%</span>
+                        </div>
+                        <div class="barra-item">
+                            <span>Redução de Emissões</span>
+                            <div class="barra-fundo">
+                                <div id="barra-carbono" class="barra"></div>
+                            </div>
+                            <span id="texto-carbono">0%</span>
+                        </div>
+                        <div class="barra-item">
+                            <span>Índice Ecológico</span>
+                            <div class="barra-fundo">
+                                <div id="barra-indice" class="barra"></div>
+                            </div>
+                            <span id="texto-indice">0%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="futuro" class="content-section">
+            <div class="section-header">
+                <h2>Olhando para o Amanhã</h2>
+                <p>O futuro da produção agrícola sustentável já começou.</p>
+            </div>
+            <div class="grid-container" style="display: block; text-align: center; max-width: 800px; margin: 0 auto;">
+                <p>O equilíbrio entre a tecnologia e o meio ambiente moldará as próximas décadas. Ao usarmos dados,
+                    robótica e inteligência de forma consciente, garantimos que o agro continue forte, alimentando o
+                    mundo sem esgotar o planeta.</p>
+                <br>
+                <p style="font-size: 22px; font-weight: bold; color: var(--verde-escuro); font-style: italic;">
+                    "Produzir com inteligência é proteger com eficiência."
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-container">
+        <div class="fontes-container">
+            <button id="btn-fontes" class="btn-fontes">
+                <svg class="icone-fontes" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                </svg>
+                Ver Fontes de Pesquisa
+            </button>
+        </div>
+
+        <div id="modal-fontes" class="modal-fontes">
+            <div class="modal-conteudo">
+                <span id="fechar-modal" class="fechar-modal">&times;</span>
+                <h3>Fontes Bibliográficas</h3>
+                <p>Este projeto e sua calculadora foram fundamentados em dados técnicos, artigos e diretrizes oficiais
+                    das seguintes instituições de referência:</p>
+                <ul class="lista-fontes">
+                    <li><a href="https://www.embrapa.br" target="_blank" rel="noopener noreferrer">EMBRAPA - Empresa
+                            Brasileira de Pesquisa Agropecuária</a></li>
+                    <li><a href="https://www.gov.br/mme/pt-br" target="_blank" rel="noopener noreferrer">MME -
+                            Ministério de Minas e Energia do Brasil</a></li>
+                    <li><a href="https://www.gov.br/agu/pt-br/comunicacao/noticias/agu-destaca-importancia-da-protecao-ambiental-para-o-desenvolvimento-sustentavel-do-pais-1"
+                            target="_blank" rel="noopener noreferrer">
+                            Advocacia-Geral
+                            da União: Importância da proteção ambiental para o desenvolvimento sustentável do país</a>
+                    </li>
+                    <li><a href="https://www.iee.usp.br/noticia/como-a-tecnologia-ambiental-esta-salvando-o-futuro-verde/"
+                            target="_blank" rel="noopener noreferrer">USP-IEE: tecnologia ambiental</a></li>
+                    <li><a href="https://www.gov.br/agricultura/pt-br/assuntos/noticias/2022/agricultura-de-precisao-e-mais-rentavel-e-diminui-necessidade-do-uso-insumos"
+                            target="_blank" rel="noopener noreferrer">GOV-Ministério da Agricultura e Pecuária:
+                            Agricultura de precisão é mais rentável e reduz a necessidade do uso de insumos</a></li>
+                    <li><a href="https://www.bosch.com.br/noticias-e-historias/agronegocio/agricultura-de-precisao/"
+                            target="_blank" rel="noopener noreferrer">BOSCH: O que é agricultura de precisão?</a></li>
+                    <li><a href="https://www.epe.gov.br/pt/abcdenergia/eficiencia-energetica" target="_blank"
+                            rel="noopener noreferrer">EPE: Eficiência Energética</a></li>
+                    <li><a href="https://www.wwf.org.br/nossosconteudos/conceitos_/economiacircular/" target="_blank"
+                            rel="noopener noreferrer">WWF: Economia Circular</a></li>
+                    <li><a href="https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/985930/1/Agricultura-de-precisao-2001.pdf"
+                            target="_blank" rel="noopener noreferrer">EMBRAPA: Agricultura de Precisão (PDF)</a></li>
+                    <li><a href="https://www.gov.br/inpe/pt-br" target="_blank" rel="noopener noreferrer"> INPE:
+                            Instituto Nacional de Pesquisas Espaciais</a></li>
+                    <li><a href="https://www.ipe.org.br" target="_blank" rel="noopener noreferrer">IPE:Instituto de
+                            Pesquisas Ecológicas</a></li>
+                </ul>
+            </div>
+        </div>
+        <p>&copy; 2026 Projeto Campo Vivo. Desenvolvido para o Concurso Agrinho - Programação Front-End.</p>
+        <p class="footer-credits">Estudante: João Pedro Lopes de Medeiros | Colégio Estadual Souza Naves - 1ºB | Rede
+            Estadual de Ensino do Paraná</p>
+    </footer>
+
+    <script src="script/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,921 @@
+:root {
+    --verde-escuro: #1b5e20;
+    --verde-folha: #4caf50;
+    --azul-ceu: #0288d1;
+    --fundo-claro: #f8faf8;
+    --texto-principal: #222222;
+    --texto-secundario: #555555;
+    --branco: #ffffff;
+    --fonte-principal: sans-serif;
+    --fonte-base: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    font-family: var(--fonte-principal);
+    color: var(--texto-principal);
+    background-color: var(--fundo-claro);
+    line-height: 1.6;
+    font-size: var(--fonte-base);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: var(--branco);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-area h1 {
+    color: var(--verde-escuro);
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--texto-secundario);
+    font-weight: 500;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s, border-bottom 0.3s;
+    padding-bottom: 5px;
+}
+
+.nav-menu a:hover {
+    color: var(--verde-folha);
+    border-bottom: 2px solid var(--verde-folha);
+}
+
+.hero-banner {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 85px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-bottom: 4px solid var(--verde-folha);
+}
+
+.hero-cenario {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.hero-conteudo {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 750px;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin: 0 20px;
+}
+
+.hero-tag {
+    display: inline-block;
+    background-color: var(--verde-escuro);
+    color: var(--branco);
+    padding: 5px 15px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+.hero-conteudo h2 {
+    font-size: 2.5rem;
+    color: var(--verde-escuro);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.hero-conteudo p {
+    font-size: 1.2rem;
+    color: var(--texto-secundario);
+    margin-bottom: 25px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.05rem;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--verde-escuro);
+    color: var(--branco);
+    box-shadow: 0 4px 15px rgba(27, 94, 32, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: var(--verde-folha);
+    transform: translateY(-3px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--verde-escuro);
+    border: 2px solid var(--verde-escuro);
+}
+
+.btn-secondary:hover {
+    background-color: var(--verde-escuro);
+    color: var(--branco);
+    transform: translateY(-3px);
+}
+
+.content-section {
+    padding: 80px 8%;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font-size: 2.2rem;
+    color: var(--verde-escuro);
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-header h2::after {
+    content: "";
+    width: 60px;
+    height: 4px;
+    background-color: var(--verde-folha);
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.section-header p {
+    font-size: 1.15rem;
+    color: var(--texto-secundario);
+}
+
+
+
+.texto-claro-fundo {
+    color: var(--branco) !important;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.card-problema {
+    background-color: var(--branco);
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #eaeaea;
+}
+
+.card-problema:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    border-color: var(--verde-folha);
+}
+
+.card-problema h3 {
+    color: var(--verde-escuro);
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.card-problema a {
+    text-decoration: none;
+    color: #4caf50;
+}
+
+.card-problema a:hover {
+    text-decoration: underline;
+}
+
+/* =================================================================
+   ESTILIZAÇÃO DAS PRÁTICAS SUSTENTÁVEIS (SEÇÕES COLADAS E LINEARES)
+   ================================================================= */
+
+.pratica-section {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    background-color: var(--verde-escuro);
+    /* Fallback de cor caso a imagem falhe */
+    margin: 0 !important;
+    /* Força margem zero garantindo junção total */
+    padding: 0 !important;
+    /* O overlay cuida do espaçamento interno */
+}
+
+/* Mapeamento de imagens para cada uma das seções independentes */
+.bloco-bg-0 {
+    background-image: url('../IMG/EnergiaRenovavel.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0 !important;
+    position: relative;
+}
+
+.bloco-bg-1 {
+    background-image: url('../IMG/EficienciaEnergetica.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0 !important;
+    position: relative;
+}
+
+.bloco-bg-2 {
+    background-image: url('../IMG/EconomiaCircular.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0 !important;
+    position: relative;
+}
+
+.bloco-bg-3 {
+    background-image: url('../IMG/AgriculturaPrecisao.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0 !important;
+    position: relative;
+}
+
+.bloco-bg-4 {
+    background-image: url('../IMG/MonitoramentoAmbiental.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0 !important;
+    position: relative;
+}
+
+.bloco-bg-5 {
+    background-image: url('../IMG/TransporteSustentavel.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0 !important;
+    position: relative;
+}
+
+.bloco-bg-6 {
+    background-image: url('../IMG/CombateDesmatamento.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0 !important;
+    position: relative;
+}
+
+.bloco-bg-7 {
+    background-image: url('../IMG/ConscientizacaoAmbiental.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0 !important;
+    position: relative;
+}
+
+.bloco-bg-8 {
+    background-image: url('../IMG/IrrigacaoEficiente.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0 !important;
+    position: relative;
+}
+
+.bloco-bg-9 {
+    background-image: url('../IMG/Biodigestores.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0 !important;
+    position: relative;
+}
+
+.bloco-bg-10 {
+    background-image: url('../IMG/Bioinceticidas.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0 !important;
+    position: relative;
+}
+
+/* Filtro escuro idêntico ao .eolica-overlay */
+.pratica-overlay {
+    background-color: rgba(0, 0, 0, 0.55);
+    padding: 70px 20px;
+    width: 100%;
+    height: 100%;
+    transition: background-color 0.3s ease;
+}
+
+/* Efeito interativo opcional ao passar o mouse */
+.pratica-section:hover .pratica-overlay {
+    background-color: rgba(0, 0, 0, 0.40);
+}
+
+/* Alinhamento de conteúdo centralizado */
+.pratica-layout {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Títulos brancos destacados */
+.pratica-layout h3 {
+    font-size: 1.6rem;
+    color: var(--branco);
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+/* Parágrafos claros legíveis com bom espaçamento */
+.pratica-layout p {
+    font-size: 19px;
+    color: #e0e0e0;
+    line-height: 1.8;
+}
+
+/* Compatibilidade das novas seções com o Modo Escuro */
+body.dark-mode .pratica-overlay {
+    background-color: rgba(15, 15, 15, 0.75);
+}
+
+body.dark-mode .pratica-layout h3 {
+    color: #81c784;
+}
+
+/* =========================================
+   FORMULÁRIO E CALCULADORA
+   ========================================= */
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.form-group input,
+.form-group select {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #fafafa;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--verde-folha);
+    background-color: var(--branco);
+}
+
+.btn-calc {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--azul-ceu);
+    color: var(--branco);
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-calc:hover {
+    background-color: #0277bd;
+}
+
+.hidden {
+    display: none;
+}
+
+.resultado-container {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.cards-resultado {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.card-res {
+    background-color: var(--fundo-claro);
+    padding: 15px;
+    border-radius: 10px;
+    border-bottom: 4px solid var(--verde-folha);
+    text-align: center;
+}
+
+.card-res h4 {
+    font-size: 13px;
+    color: var(--texto-secundario);
+    text-transform: uppercase;
+}
+
+.card-res p {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--verde-escuro);
+}
+
+.grafico-container {
+    margin-top: 30px;
+}
+
+.barra-item {
+    margin-bottom: 15px;
+}
+
+.barra-item span {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.barra-fundo {
+    width: 100%;
+    height: 24px;
+    background: #e0e0e0;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.barra {
+    width: 0;
+    height: 100%;
+    border-radius: 50px;
+    transition: width 1.5s ease;
+    background: linear-gradient(90deg, #2e7d32, #66bb6a);
+}
+
+.helices-lenta {
+    transform-origin: 50px 30px;
+    animation: girarCenarioEolica 12s linear infinite;
+}
+
+.helices-rapida {
+    transform-origin: 50px 38px;
+    animation: girarCenarioEolica 7s linear infinite;
+}
+
+@keyframes girarCenarioEolica {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.footer-container {
+    background-color: var(--verde-escuro);
+    color: var(--branco);
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.footer-credits {
+    font-size: 13px;
+    color: #a5d6a7;
+    margin-top: 10px;
+}
+
+.config-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.btn-config {
+    background: transparent;
+    color: var(--texto-secundario);
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s ease;
+}
+
+.btn-config:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: var(--verde-folha);
+    transform: rotate(45deg);
+}
+
+.icone-engrenagem {
+    width: 24px;
+    height: 24px;
+}
+
+.painel-config {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 15px);
+    background: var(--branco);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    min-width: 220px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border: 1px solid #eaeaea;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
+
+.painel-config.ativo {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.btn-controle {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--fundo-claro);
+    color: var(--texto-principal);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-controle:hover {
+    background-color: #e2ede2;
+    border-color: var(--verde-folha);
+}
+
+.controle-fonte {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.controle-fonte label {
+    font-size: 13px;
+    font-weight: bold;
+    color: var(--texto-secundario);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.painel-config button {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* =========================================
+   MODO ESCURO COMPLEMENTAR
+   ========================================= */
+
+body.dark-mode {
+    background-color: #121212;
+    color: #f5f5f5;
+}
+
+body.dark-mode .painel-config {
+    background-color: #1e1e1e;
+    border-color: #333;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .btn-config:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .btn-controle {
+    background-color: #2a2a2a;
+    color: white;
+    border-color: #444;
+}
+
+body.dark-mode .btn-controle:hover {
+    background-color: #333;
+    border-color: #81c784;
+}
+
+body.dark-mode .content-section,
+body.dark-mode .painel-config {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode .card-problema,
+body.dark-mode .card-interativo,
+body.dark-mode .card-res,
+body.dark-mode .calculadora-box {
+    background-color: #2a2a2a;
+    color: white;
+}
+
+body.dark-mode .hero-conteudo {
+    background-color: rgba(30, 30, 30, 0.85);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .hero-conteudo h2,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4 {
+    color: #81c784;
+}
+
+body.dark-mode .hero-conteudo p {
+    color: #e0e0e0;
+}
+
+body.dark-mode .header-container,
+body.dark-mode .footer-container {
+    background-color: #1a1a1a;
+}
+
+/* =========================================
+   RESPONSIVIDADE (MEDIA QUERIES)
+   ========================================= */
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 15px;
+    }
+
+    .nav-menu ul {
+        margin-top: 0;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+}
+
+/* =================================================================
+   MODAL INTERATIVO DE FONTES E REFERÊNCIAS
+   ================================================================= */
+.fontes-container {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: var(--verde-escuro);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-fontes {
+    background-color: transparent;
+    color: var(--branco);
+    border: 2px solid var(--branco);
+    padding: 12px 28px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.btn-fontes:hover {
+    background-color: var(--branco);
+    color: var(--verde-escuro);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.modal-fontes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-fontes.ativo {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-conteudo {
+    background-color: var(--branco);
+    color: var(--texto-principal);
+    padding: 35px;
+    border-radius: 16px;
+    max-width: 550px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    transform: translateY(-20px);
+    transition: transform 0.3s ease;
+}
+
+.modal-fontes.ativo .modal-conteudo {
+    transform: translateY(0);
+}
+
+.fechar-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--texto-secundario);
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.fechar-modal:hover {
+    color: #d32f2f;
+}
+
+.modal-conteudo h3 {
+    color: var(--verde-escuro);
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+    font-weight: 800;
+}
+
+.modal-conteudo p {
+    font-size: 1rem;
+    color: var(--texto-secundario);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.lista-fontes {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    text-align: left;
+}
+
+.lista-fontes li a {
+    color: var(--azul-ceu);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05rem;
+    display: inline-block;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.lista-fontes li a:hover {
+    color: var(--verde-folha);
+    transform: translateX(4px);
+}
+
+/* Suporte ao Modo Escuro no Modal */
+body.dark-mode .modal-conteudo {
+    background-color: #1e1e1e;
+    color: #f5f5f5;
+    border: 1px solid #333;
+}
+
+body.dark-mode .modal-conteudo h3 {
+    color: #81c784;
+}
+
+body.dark-mode .modal-conteudo p {
+    color: #e0e0e0;
+}
+
+body.dark-mode .lista-fontes li a {
+    color: #64b5f6;
+}
+
+body.dark-mode .lista-fontes li a:hover {
+    color: #81c784;
+}
+
+body.dark-mode .fechar-modal:hover {
+    color: #ff5252;
+}
+
+/* =================================================================
+   AJUSTE DE IMERSÃO: CÉU DO HEADER ESCURO NO MODO NOTURNO
+   ================================================================= */
+
+/* Altera dinamicamente as cores do gradiente do céu do SVG */
+body.dark-mode #ceu-gradiente stop:nth-child(1) {
+    stop-color: #0b0f19;
+    /* Azul-escuro quase preto no topo do céu */
+}
+
+body.dark-mode #ceu-gradiente stop:nth-child(2) {
+    stop-color: #111827;
+    /* Tom intermediário de transição da noite */
+}
+
+body.dark-mode #ceu-gradiente stop:nth-child(3) {
+    stop-color: #1f2937;
+    /* Tom cinza-azulado suave perto do horizonte/montanhas */
+}
