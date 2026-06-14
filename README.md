@@ -49,4 +49,4 @@ Em total conformidade com os critérios rigorosos do regulamento do Concurso Agr
 └── 📄 README.md           # Documentação técnica do projeto´´´
 
 ## Observações:
-Todas as imagens do site são de  bancos de imagens gratuitos. As fntes são insternas do Visual Studio Code.
+Todas as imagens do site são de  bancos de imagens gratuitos. As fontes são internas do Visual Studio Code.
