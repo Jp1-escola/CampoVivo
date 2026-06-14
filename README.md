@@ -44,5 +44,7 @@ Em total conformidade com os critérios rigorosos do regulamento do Concurso Agr
 ├── 📂 script/
 │   └── script.js          # Lógica da calculadora, modal e acessibilidade
 ├── 📄 index.html          # Estrutura principal do site e elementos semânticos
-└── 📄 README.md           # Documentação técnica do projeto
+└── 📄 README.md           # Documentação técnica do projeto´´´
 
+## Observações:
+Todas as imagens do site são de  bancos de imagens gratuitos. As fntes são insternas do Visual Studio Code.
