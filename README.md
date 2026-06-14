@@ -39,6 +39,8 @@ Em total conformidade com os critérios rigorosos do regulamento do Concurso Agr
 
 ```text
 📂 campo-vivo/
+├── 📂 IMG/
+│   └── ...
 ├── 📂 CSS/
 │   └── style.css          # Estilização completa, variáveis e Modo Escuro
 ├── 📂 script/
